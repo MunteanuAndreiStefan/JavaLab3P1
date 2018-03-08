@@ -1,3 +1,9 @@
+package Solver;
+
+import Model.Algorithm;
+import Model.IAsset;
+import Model.Item;
+
 import java.util.ArrayList;
 
 public class GreedyAlgorithm implements Algorithm {

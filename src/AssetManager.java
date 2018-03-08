@@ -1,3 +1,8 @@
+import Model.Algorithm;
+import Model.IAsset;
+import Model.Item;
+import Model.Portofolio;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,6 +15,7 @@ class SortByProfit implements Comparator<IAsset>
         return a.computeProfit() - b.computeProfit();
     }
 }
+
 public class AssetManager {
     private ArrayList<Item> items = new ArrayList<Item>();
 
@@ -27,6 +33,7 @@ public class AssetManager {
     private void sort(){
         Collections.sort(items, Item::compareTo);
     }
+
     //private void sortByProfit() {Collections.sort()}
     /**
      * Prints all items in order.
@@ -51,6 +58,7 @@ public class AssetManager {
         }
         return (text.toString());
     }
+
     public ArrayList<IAsset> getAssetList()
     {
         ArrayList<IAsset> assets = new ArrayList<IAsset>();
@@ -66,6 +74,7 @@ public class AssetManager {
         Collections.reverse(assets);
         return assets;
     }
+
     public Portofolio createPortofolio(Algorithm algorithm, int maxValue)
     {
         Portofolio portofolio= new Portofolio(algorithm,maxValue, getAssetList());

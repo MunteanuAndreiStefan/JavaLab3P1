@@ -1,7 +1,9 @@
+import Model.*;
+import Solver.DPAlgorithm;
+
 public class Main {
 
     public static void main(String[] args) {
-
 
         Building h1 = new Building("House 1", 27, 9);
         Vehicle c1 = new Vehicle("Car 1", 2, 5);

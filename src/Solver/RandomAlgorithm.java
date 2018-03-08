@@ -1,5 +1,10 @@
+package Solver;
+
+import Model.Algorithm;
+import Model.IAsset;
+import Model.Item;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Random;
 
 public class RandomAlgorithm implements Algorithm {
@@ -12,12 +17,12 @@ public class RandomAlgorithm implements Algorithm {
             Random random=new Random();
             int i=random.nextInt(assets.size());
             IAsset asset=assets.get(i);
-            if(currentValue-((Item)asset).getPrice()<0)
+            if(currentValue-asset.getPrice()<0)
                 assets.remove(i);
             else
             {
                 totalProfit+=asset.computeProfit();
-                currentValue-=((Item)asset).getPrice();
+                currentValue-=asset.getPrice();
                 assets.remove(i);
             }
         }

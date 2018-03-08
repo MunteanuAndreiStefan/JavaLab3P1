@@ -1,7 +1,12 @@
+package Solver;
+
+import Model.Algorithm;
+import Model.IAsset;
+
 import java.util.ArrayList;
 
 
-public class DPAlgorithm implements  Algorithm{
+public class DPAlgorithm implements Algorithm {
     @Override
     public int solve(int maxValue, ArrayList<IAsset> assets) {
         int[][] dp= new int[assets.size()+1][maxValue+1];
@@ -29,9 +34,9 @@ public class DPAlgorithm implements  Algorithm{
 import java.util.ArrayList;
 
 
-public class DPAlgorithm implements  Algorithm{
+public class Solver.DPAlgorithm implements  Model.Algorithm{
     @Override
-    public int solve(int maxValue, ArrayList<IAsset> assets) {
+    public int solve(int maxValue, ArrayList<Model.IAsset> assets) {
         int[][] dp= new int[assets.size()+1][maxValue+1];
         int n=assets.size();
         for(int i=1;i<=n;i++)

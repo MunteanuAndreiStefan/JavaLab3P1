@@ -1,6 +1,6 @@
 # JavaLab3P1
 
- The Portofolio Optimization Problem
+ The Model.Portofolio Optimization Problem
 A company must implement a software solution for creating its investment portofolio. A number of items, all having a name and a price, are taken into consideration, for example buildings, vehicles, jewels, etc. Each item type has a unique name and a price. Some items (called assets) have also defined a method for calculating their expected profit and only they will be considered for the final purchase. The profit factors are defined as:
 
     building: area / price
@@ -25,12 +25,12 @@ Example:
   selected assets: Car1, Car2, House 1
 
 
-    Create an object-oriented model of the problem. You should have at least the following classes Building, Vehicle, Jewel, extending the superclass Item.
+    Create an object-oriented model of the problem. You should have at least the following classes Model.Building, Model.Vehicle, Model.Jewel, extending the superclass Model.Item.
     Create the interface Asset, describing only the items that have the computeProfit method.
     Create all the objects given in the example.
 
-      Building h1 = new Building("House 1", 27, 9);
-      Vehicle c1 = new Vehicle("Car 1", 8, 4);
+      Model.Building h1 = new Model.Building("House 1", 27, 9);
+      Model.Vehicle c1 = new Model.Vehicle("Car 1", 8, 4);
       . ..
 
     Create the AssetManager class that will contain a set of items. Display all the items sorted by their names.
