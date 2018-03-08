@@ -1,6 +1,6 @@
 public class Vehicle extends Item implements IAsset {
 
-    private float performance;
+    private int performance;
 
     /**
      * Default construct for Vehicle class.
@@ -8,7 +8,7 @@ public class Vehicle extends Item implements IAsset {
      * @param name  - the object name.
      * @param price - the object price.
      */
-    public Vehicle(String name, float price) {
+    public Vehicle(String name, int price) {
         super(name, price);
         performance = 0;
     }
@@ -20,7 +20,7 @@ public class Vehicle extends Item implements IAsset {
      * @param price - the vehicle price.
      * @param performance - the vehicle performance.
      */
-    public Vehicle(String name, float price, float performance) {
+    public Vehicle(String name, int price, int performance) {
         super(name, price);
         this.performance = performance;
     }
@@ -31,7 +31,7 @@ public class Vehicle extends Item implements IAsset {
      * @return returns the profit into our imaginary currency.
      */
     @Override
-    public float computeProfit() {
-        return 0;
+    public int computeProfit() {
+        return this.performance/this.getPrice();
     }
 }

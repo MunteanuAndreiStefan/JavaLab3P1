@@ -8,7 +8,7 @@ public class Building extends Item implements IAsset {
      * @param name  - the object name.
      * @param price - the object price.
      */
-    public Building(String name, float price) {
+    public Building(String name, int price) {
         super(name, price);
     }
 
@@ -19,7 +19,7 @@ public class Building extends Item implements IAsset {
      * @param price - the building price.
      * @param area - the area zone of the building..
      */
-    public Building(String name, float price, int area) {
+    public Building(String name, int price, int area) {
         super(name, price);
         this.area = area;
     }
@@ -31,7 +31,7 @@ public class Building extends Item implements IAsset {
      */
 
     @Override
-    public float computeProfit() {
-        return 0;
+    public int computeProfit() {
+        return area/getPrice();
     }
 }
