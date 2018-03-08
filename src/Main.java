@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Items sorted by name:\n" + manager.getItems());
         System.out.println("Assets sorted by profit:\n" + manager.getAssets());
         //manager.getItems();
-        int maxValue = 2;
+        int maxValue = 3;
         Portofolio solution = manager.createPortofolio(new DPAlgorithm(), maxValue);
         System.out.println("The best portofolio: " + solution);
     }
