@@ -11,4 +11,8 @@ public interface IAsset {
     {
         return 0;
     }
+    public default int getPrice()
+    {
+        return ((Item)this).getPrice();
+    }
 }
